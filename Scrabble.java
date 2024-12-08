@@ -122,7 +122,7 @@ public class Scrabble {
 				hand = MyString.remove(hand,input);
 			} else {
 				if(input.equals("."))	break; // "." ends the player's turn.
-				System.out.println("Invalid word. Try again");
+				System.out.println("Invalid word. Try again.");
 			}
 		}
 		if (hand.length() == 0) {
