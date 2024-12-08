@@ -119,6 +119,7 @@ public class Scrabble {
 			if(isWordInDictionary(input)){
 				score += wordScore(input);
 				System.out.println(input + " earned "+ wordScore(input) +" points. Score: "+ score +" points.");
+				System.out.println();
 				hand = MyString.remove(hand,input);
 			} else {
 				if(input.equals("."))	break; // "." ends the player's turn.
