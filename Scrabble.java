@@ -118,9 +118,12 @@ public class Scrabble {
 			String input = in.readString();
 			if(isWordInDictionary(input)){
 				score += wordScore(input);
+				System.out.println(input + " earned "+ wordScore(input) +" points. Score: "+ score +" points.");
 				hand = MyString.remove(hand,input);
+			} else {
+				if(input.equals("."))	break; // "." ends the player's turn.
+				System.out.println("Invalid word Try again");
 			}
-			if(input.equals("."))	break; // "." ends the player's turn.
 		}
 		if (hand.length() == 0) {
 	        System.out.println("Ran out of letters. Total score: " + score + " points");
@@ -148,7 +151,7 @@ public class Scrabble {
 			} else if(input.equals("e")) {
 				break;
 			} else {
-				System.out.println("error.");
+				System.out.println("Invalid word. Try again.");
 			}
 			
 		}
